@@ -1,0 +1,5 @@
+server:
+  port: 8085
+  
+api_url_search: https://api.genius.com/search
+api_access_toke: bSOC85DfzVxoSNdDv6O3kBX9srncTqLRsz5dwloR9OffEqDQ4h2ljsvTdBXRgRyY
