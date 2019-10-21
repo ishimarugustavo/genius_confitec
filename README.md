@@ -1,4 +1,6 @@
 # genius_confitec
+Pré Requisitos:
+  Instalar a lib do Lombok na IDE que for utilizar. (Caso não utilize ocorrerá erro nos Get's e Set's).
 
 Passo 1:
   Baixar o projeto do git. (git clone https://github.com/ishimarugustavo/genius_confitec.git)
