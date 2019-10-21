@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import br.com.confitec.genius.Service.GeniusService;
 import br.com.confitec.genius.dto.MusicaDTO;
+import br.com.confitec.genius.service.GeniusService;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)

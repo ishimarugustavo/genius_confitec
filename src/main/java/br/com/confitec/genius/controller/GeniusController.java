@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.confitec.genius.Service.GeniusService;
 import br.com.confitec.genius.dto.MusicaDTO;
+import br.com.confitec.genius.service.GeniusService;
 import io.swagger.annotations.ApiOperation;
 
 @RestController

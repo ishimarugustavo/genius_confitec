@@ -1,4 +1,4 @@
-package br.com.confitec.genius.Service;
+package br.com.confitec.genius.service;
 
 import java.util.ArrayList;
 import java.util.List;
