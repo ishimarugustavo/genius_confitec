@@ -3,6 +3,7 @@ package br.com.confitec.genius.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -32,7 +33,10 @@ public class GeniusService {
 	@Value("${api_url}")
 	private String urlApi;
 	
+	private String url;
+	
 	public List<MusicaDTO> getMusciasByArtista(String nome) {
+		url = Strings.EMPTY;
 		List<MusicaDTO> listaMusicas = new ArrayList<MusicaDTO>();
 		
 		HttpHeaders httpHeaders = new HttpHeaders();
@@ -50,8 +54,8 @@ public class GeniusService {
 		retornoBody = retorno.getBody();
 		
 		if (retornoBody != null) {
-			urlApi = urlApi + "artists/" + retornoBody.getResponse().getHits()[0].getResult().getPrimary_artist().getId() + "/songs";
-			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(urlApi)
+			url = urlApi + "artists/" + retornoBody.getResponse().getHits()[0].getResult().getPrimary_artist().getId() + "/songs";
+			UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url)
 					.queryParam("sort", "popularity")
 					.queryParam("per_page", "10")
 					.queryParam("page", "10");

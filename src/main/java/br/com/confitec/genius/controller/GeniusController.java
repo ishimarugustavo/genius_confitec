@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.confitec.genius.Service.GeniusService;
 import br.com.confitec.genius.dto.MusicaDTO;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 public class GeniusController {
@@ -17,6 +18,7 @@ public class GeniusController {
 	@Autowired
 	private GeniusService service;
 
+	@ApiOperation(value = "API Genius")
 	@RequestMapping(value = "/getMusicasByArtista", method = RequestMethod.GET)
 	public List<MusicaDTO> getMusicasByArtista(@RequestParam("nomeArtista") String nome) {
 		return service.getMusciasByArtista(nome);
